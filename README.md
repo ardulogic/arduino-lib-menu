@@ -26,16 +26,15 @@ void setup() {
     lcd.zones[0]->set(0, 0, 30, 8);
     lcd.zones[1]->set(0, 8, 30, 8);
     
-  
-    myMenu.createTopic(0, 3);
-    Serial.println((int) P_LABEL_SPEED_STOP);
-    
+	//                 Topic ID, Num Choices
+    myMenu.createTopic(       0,             3);
     myMenu.topics[0]->addChoice(0, 100, P_LABEL_SPEED_STOP);
     myMenu.topics[0]->addChoice(1, 250, P_LABEL_SPEED_SLOW);
     myMenu.topics[0]->addChoice(2, 300, P_LABEL_SPEED_SLOW_P);  
     myMenu.topics[0]->setActiveChoice(1);
 
-    myMenu.createTopic(1, 3);
+	//                 Topic ID, Num Choices
+    myMenu.createTopic(       0,             3);
     myMenu.topics[1]->addChoice(0, 600, P_LABEL_SPEED_STOP);
     myMenu.topics[1]->addChoice(1, 750, P_LABEL_SPEED_SLOW);
     myMenu.topics[1]->addChoice(2, 900, P_LABEL_SPEED_SLOW_P);  
